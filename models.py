@@ -1,7 +1,7 @@
-from config.models import Base
 from sqlalchemy import Column,VARCHAR,String,Text,Enum
-from pydantic import BaseModel
+from sqlalchemy.ext.declarative import declarative_base
 
+Base = declarative_base()
 
 class StudentModel(Base):
     __tablename__ = "student"
@@ -10,9 +10,3 @@ class StudentModel(Base):
     address = Column(Text)
     gender = Column(Enum("laki-laki","perempuan"))
 
-
-class StudentBody(BaseModel):
-    name : str
-    address : str = None
-    gender : str
-    
