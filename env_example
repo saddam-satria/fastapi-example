@@ -1,4 +1,1 @@
-#DB_HOST=127.0.0.0
-#DB_USERNAME=
-#DB_PASSWORD=
-#DB_DATABASE=
+DATABASE_URL=driver+driver://username:password@host/db
